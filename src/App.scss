@@ -1,3 +1,5 @@
+@import "./shared/variable.scss";
+
 * {
     margin: 0;
     padding: 0;
@@ -24,4 +26,21 @@ body {
     background-color: #334B5B;
     border: #1E384A solid 2px;
     border-radius: 4px;
+
+    width: 350px;
+    padding: 5px;
+}
+
+
+
+@media screen and (min-width: $mid-screen) {
+    .box {
+        width: 716px;
+    }
+}
+
+@media screen and (min-width: $max-screen) {
+    .box {
+        width: 1074px;   
+    }
 }

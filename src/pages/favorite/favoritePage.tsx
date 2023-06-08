@@ -1,6 +1,6 @@
 export const FavoritePage = () => {
     return (
-        <main>
+        <main className="box">
             coucou
         </main>
     )

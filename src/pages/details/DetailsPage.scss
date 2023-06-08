@@ -1,0 +1,57 @@
+@import "../../shared/variable.scss";
+
+#details-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+    
+    #adress {
+        font-size: 0.8em;
+    }
+
+    img {
+        width: 350px;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    #menu {
+        width: 100%;
+        
+        align-self: flex-start;
+
+        h2 {
+            text-align: center;
+
+        }
+
+
+        h3 {
+            font-size: 0.9em;
+        }
+        ul {
+            padding-inline-start: 30px;
+        }
+    }
+}
+
+
+@media screen and (min-width: $mid-screen) {
+    #details-section {
+        img {
+            width: $mid-screen - 100px;
+        }
+    }
+}
+
+@media screen and (min-width: $max-screen) {
+    #details-section {
+        img {
+            width: $max-screen - 100px;
+        } 
+    }
+}

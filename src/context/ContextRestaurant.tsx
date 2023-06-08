@@ -3,7 +3,7 @@ import { IRestaurant } from "../interface/IRestaurant";
 
 
 type RestaurantContextType = {
-    restaurants: IRestaurant[];
+    restaurantsAll: IRestaurant[];
 }
 
 export const ContextRestaurant = createContext({} as RestaurantContextType);
