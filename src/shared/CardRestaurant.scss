@@ -1,0 +1,41 @@
+#restaurant-card {
+    background-color: #3b576e;
+
+    width: 330px;
+    height: 300px;
+    margin: 5px;
+    padding: 7px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    img {
+        width: 310px;
+        max-height: 200px;
+    }
+
+    #btn-favorite {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        
+        img {
+            width: 40px;
+            filter: grayscale(100%);
+        }
+    }
+
+    #short-text {
+        font-size: 1em;
+        color: rgb(140, 140, 140);
+        font-style: italic;
+    }
+
+    #adresse {
+        font-size: 0.7em;
+    }
+}

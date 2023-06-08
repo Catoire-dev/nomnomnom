@@ -1,0 +1,22 @@
+@import "./variable.scss";
+
+#restaurant-list {
+    width: 350px;
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: $mid-screen) {
+    #restaurant-list {
+        width: 716px;
+    }
+}
+
+@media screen and (min-width: $max-screen) {
+    #restaurant-list {
+        width: 1074px;   
+    }
+}

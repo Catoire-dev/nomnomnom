@@ -1,0 +1,61 @@
+@import "./variable.scss";
+
+@font-face {
+    font-family: "Soopafresh";
+    src: local("Soopafresh"),
+      url("../assets/font/soopafresh/soopafresh.ttf") format("truetype");
+  }
+
+header {
+    width: 350px;
+    height: 65px;
+    margin: 20px 0;
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #title {
+        font-family: Soopafresh;
+        font-size: 1.5em;
+        text-align: center;
+        color: #73ABC3;
+        -webkit-text-stroke: 1px #000000;
+    }
+
+    #favorite-section {
+        display: flex;
+        gap: 10px;
+
+        #favorite-btn {
+            background-color: #3b576e;
+            color: black;
+            border: 1px outset black;
+            border-radius: 2px;
+            padding: 5px 10px;
+        }
+
+        #logo {
+            width: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: $min-screen) {
+    header {
+        width: $min-screen - 20px;
+    }
+}
+
+@media screen and (min-width: $mid-screen) {
+    header {
+        width: $mid-screen - 20px;
+    }
+}
+
+@media screen and (min-width: $max-screen) {
+    header {
+        width: $max-screen - 20px;
+    }
+}
