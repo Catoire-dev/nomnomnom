@@ -8,6 +8,7 @@ import { Home } from './pages/home/Home'
 import { ContextRestaurant } from './context/ContextRestaurant'
 import { Header } from './shared/Header';
 import { FavoritePage } from './pages/favorite/favoritePage';
+import { DetailsPage } from './pages/details/DetailsPage';
 
 function App() {
 
@@ -15,11 +16,19 @@ function App() {
     <>
       <Header />
       <Routes>
+
         <Route path="/" element={
-          <ContextRestaurant.Provider value={{restaurants: restaurants}}>
+          <ContextRestaurant.Provider value={{restaurantsAll: restaurants}}>
             <Home />
           </ContextRestaurant.Provider>
-        }/>
+        } />
+
+        <Route path="/details/:id" element={
+          <ContextRestaurant.Provider value={{restaurantsAll: restaurants}}>
+            <DetailsPage />
+          </ContextRestaurant.Provider>
+        } />
+        
         <Route path="/favorite" element={<FavoritePage />} />
       </Routes>
     </>

@@ -7,7 +7,7 @@ type CardRestaurantProps = {
 }
 
 export const CardRestaurant = ({restaurantData}: CardRestaurantProps) => {
-    const imgFav = "./src/assets/img/cheese.png";
+    const imgFav = "/src/assets/img/cheese.png";
     const imgFavAlt="Image of a cheese in black and white";
     const imgAlt = "Photo of restaurant";
     const linkDetails = `/details/${restaurantData.id}`;

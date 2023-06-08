@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import "./Header.scss"
 
 export const Header = () => {
-    const img = "./src/assets/img/hole-mice.png";
+    const img = "/src/assets/img/hole-mice.png";
     const imgAltText = "Mouse hole";
     const buttonText = "Favorite";
 
     return (
-        <header className="box">
+        <header>
             <Link to="/">
                 <h1 id="title">NomNomNom</h1>
             </Link>
