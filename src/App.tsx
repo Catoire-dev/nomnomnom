@@ -9,28 +9,22 @@ import { ContextRestaurant } from './context/ContextRestaurant'
 import { Header } from './shared/Header';
 import { FavoritePage } from './pages/favorite/favoritePage';
 import { DetailsPage } from './pages/details/DetailsPage';
+import { ContextFavoriteProvider } from './context/ContextFavorite';
 
 function App() {
 
   return (
     <>
       <Header />
+      <ContextRestaurant.Provider value={{restaurantsAll: restaurants}}>
+      <ContextFavoriteProvider>
       <Routes>
-
-        <Route path="/" element={
-          <ContextRestaurant.Provider value={{restaurantsAll: restaurants}}>
-            <Home />
-          </ContextRestaurant.Provider>
-        } />
-
-        <Route path="/details/:id" element={
-          <ContextRestaurant.Provider value={{restaurantsAll: restaurants}}>
-            <DetailsPage />
-          </ContextRestaurant.Provider>
-        } />
-        
+        <Route path="/" element={<Home />} />
+        <Route path="/details/:id" element={<DetailsPage />} />
         <Route path="/favorite" element={<FavoritePage />} />
       </Routes>
+      </ContextFavoriteProvider>
+      </ContextRestaurant.Provider>
     </>
   )
 }

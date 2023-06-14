@@ -1,0 +1,52 @@
+@import "./variable.scss";
+
+#fav-del-modal {
+    background-color: rgba(73, 73, 73, 0.75);
+    
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+#fav-del-modal-content {
+    width: 350px;
+    height: 250px;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#modal-btn {
+    display: flex;
+    gap: 10px;
+    .btn {
+        background-color: #5d6870;
+        color: black;
+        border: 1px outset black;
+        border-radius: 2px;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (min-width: $mid-screen) {
+    #fav-del-modal-content {
+        width: 650px;
+    }
+}
+
+@media screen and (min-width: $max-screen) {
+    #fav-del-modal-content {
+        width: 1000px;   
+    }
+}

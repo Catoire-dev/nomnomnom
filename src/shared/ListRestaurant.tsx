@@ -1,15 +1,21 @@
-import { useRestaurantContext } from "../context/ContextRestaurant"
+import { IRestaurant } from "../interface/IRestaurant";
+import { FavDelModal } from "./FavDelModal";
 import { CardRestaurant } from "./CardRestaurant";
 
 import "./ListRestaurant.scss"
+import { useContextFavorite } from "../context/ContextFavorite";
 
-export const ListRestaurant = () => {
-    const {restaurantsAll} = useRestaurantContext();
+type ListRestaurantProps = {
+    restaurantList: IRestaurant[];
+}
 
+export const ListRestaurant = ({restaurantList}: ListRestaurantProps) => {
+    const {favIdToDel} = useContextFavorite();
     return (
         <section id="restaurant-list">
+            <FavDelModal cardId={favIdToDel} />
             {
-                restaurantsAll.map(restaurant => <CardRestaurant restaurantData={restaurant} key={restaurant.id} />)
+                restaurantList.map(restaurant => <CardRestaurant restaurantData={restaurant} key={restaurant.id} />)
             }
         </section>
     )
