@@ -18,11 +18,11 @@ function App() {
       <Header />
       <ContextRestaurant.Provider value={{restaurantsAll: restaurants}}>
       <ContextFavoriteProvider>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/details/:id" element={<DetailsPage />} />
-        <Route path="/favorite" element={<FavoritePage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/details/:id" element={<DetailsPage />} />
+          <Route path="/favorite" element={<FavoritePage />} />
+        </Routes>
       </ContextFavoriteProvider>
       </ContextRestaurant.Provider>
     </>

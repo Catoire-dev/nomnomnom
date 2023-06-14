@@ -17,7 +17,6 @@ export const FavButton = ({cardId, isFav, switchModal, addFav, setId}: FavButton
         isFav ? switchModal() : addFav(cardId);
     }
     
-    
     return (
         <button onClick={() => clickFavBtn(cardId)} id="btn-favorite"><img id="fav-btn-img" className={isFav ? "fav-btn-img-inactive" : "fav-btn-img-active"} src={imgFav} alt={imgFavAlt} /></button>
     )
