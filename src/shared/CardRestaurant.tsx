@@ -1,20 +1,24 @@
 import { Link } from "react-router-dom";
-import { IRestaurant } from "../interface/IRestaurant";
+
 import "./CardRestaurant.scss"
+
+import { IRestaurant } from "../interface/IRestaurant";
+import { FavButton } from "./FavButton";
+import { useContextFavorite } from "../context/ContextFavorite";
 
 type CardRestaurantProps = {
     restaurantData: IRestaurant;
 }
 
 export const CardRestaurant = ({restaurantData}: CardRestaurantProps) => {
-    const imgFav = "/src/assets/img/cheese.png";
-    const imgFavAlt="Image of a cheese in black and white";
     const imgAlt = "Photo of restaurant";
     const linkDetails = `/details/${restaurantData.id}`;
+    const {favoriteList, addFavorite, switchModal, setId} = useContextFavorite();
+
 
     return (
         <div id="restaurant-card" className="box">
-            <button id="btn-favorite"><img src={imgFav} alt={imgFavAlt} /></button>
+            <FavButton setId={setId} cardId={restaurantData.id} isFav={favoriteList.includes(restaurantData.id)} addFav={addFavorite} switchModal={switchModal}/>
             <h2>{restaurantData.name}</h2>
             <p id="adresse">{restaurantData.address}</p>
             <Link to={linkDetails}>

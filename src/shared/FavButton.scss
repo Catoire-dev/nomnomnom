@@ -1,0 +1,25 @@
+#btn-favorite {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    
+    #fav-btn-img {
+        width: 40px;
+    }
+
+    .fav-btn-img-active {
+        filter: grayscale(100%);
+    }
+
+    .fav-btn-img-inactive {
+        filter: grayscale(0%);
+    }
+}
+
+#btn-favorite:hover {
+    #fav-btn-img {
+        filter: grayscale(0%);
+    }
+}

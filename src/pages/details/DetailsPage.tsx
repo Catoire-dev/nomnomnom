@@ -1,9 +1,15 @@
 import { useParams } from "react-router-dom";
-import "./DetailsPage.scss"
 import { useRestaurantContext } from "../../context/ContextRestaurant";
+
+import "./DetailsPage.scss"
+
+import { FavButton } from "../../shared/FavButton";
+import { useContextFavorite } from "../../context/ContextFavorite";
+import { FavDelModal } from "../../shared/FavDelModal";
 
 export const DetailsPage = () => {
     const {restaurantsAll} =  useRestaurantContext();
+    const {favoriteList, setId, addFavorite, switchModal} = useContextFavorite();
 
     const {id} = useParams();
     const restId = Number(id);
@@ -18,6 +24,8 @@ export const DetailsPage = () => {
 
     return (
         <section id="details-section" className="box">
+            <FavDelModal cardId={restId}/>
+            <FavButton setId={setId} cardId={restId} isFav={favoriteList.includes(restId)} addFav={addFavorite} switchModal={switchModal}/>
             <h1>{title}</h1>
             <h2 id="adress">{adresse}</h2>
             <img src={img} alt={imgAlt} />
