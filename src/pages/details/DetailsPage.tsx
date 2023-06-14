@@ -8,10 +8,10 @@ import { useContextFavorite } from "../../context/ContextFavorite";
 import { FavDelModal } from "../../shared/FavDelModal";
 
 export const DetailsPage = () => {
-    const {restaurantsAll} =  useRestaurantContext();
-    const {favoriteList, setId, addFavorite, switchModal} = useContextFavorite();
+    const { restaurantsAll } =  useRestaurantContext();
+    const { favoriteList, setId, addFavorite, switchModal } = useContextFavorite();
 
-    const {id} = useParams();
+    const { id } = useParams();
     const restId = Number(id);
 
     const restaurant = restaurantsAll.find((rest) => rest.id == restId);

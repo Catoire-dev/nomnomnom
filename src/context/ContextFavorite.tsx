@@ -55,5 +55,5 @@ export const ContextFavoriteProvider = ({children}: ContextProps) => {
         <ContextFavorite.Provider value={{favoriteList, addFavorite, delFavorite, switchModal, modalState, setId, favIdToDel}}>
             {children}
         </ContextFavorite.Provider>
-        )
+    )
 }

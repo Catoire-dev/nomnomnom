@@ -1,5 +1,6 @@
-import { useContextFavorite } from "../context/ContextFavorite";
 import "./FavDelModal.scss";
+
+import { useContextFavorite } from "../context/ContextFavorite";
 
 type FavDevModalProps = {
     cardId:number;

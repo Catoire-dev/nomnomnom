@@ -1,8 +1,8 @@
+import "./ListRestaurant.scss"
+
 import { IRestaurant } from "../interface/IRestaurant";
 import { FavDelModal } from "./FavDelModal";
 import { CardRestaurant } from "./CardRestaurant";
-
-import "./ListRestaurant.scss"
 import { useContextFavorite } from "../context/ContextFavorite";
 
 type ListRestaurantProps = {
