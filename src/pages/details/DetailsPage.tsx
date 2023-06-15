@@ -28,22 +28,31 @@ export const DetailsPage = () => {
             <FavButton setId={setId} cardId={restId} isFav={favoriteList.includes(restId)} addFav={addFavorite} switchModal={switchModal}/>
             <h1>{title}</h1>
             <h2 id="adress">{adresse}</h2>
-            <img src={img} alt={imgAlt} />
+            <img className="border-only" src={img} alt={imgAlt} />
             <p>{description}</p>
+            <hr />
             <section id="menu">
                 <h2>Menu</h2>
-                <h3>Entrée</h3>
-                <ul>
-                    {restaurant?.menu.entrees.map((entree, id) => <li key={id}>{entree}</li>)}
-                </ul>
-                <h3>Plat</h3>
-                <ul>
-                    {restaurant?.menu.dishes.map((dishe, id) => <li key={id}>{dishe}</li>)}
-                </ul>
-                <h3>Desert</h3>
-                <ul>
-                    {restaurant?.menu.deserts.map((desert, id) => <li key={id}>{desert}</li>)}
-                </ul>
+                <div id="menu-content">
+                    <div className="menu-details border-only">
+                    <h3 className="border-only"> Entrée</h3>
+                        <ul>
+                            {restaurant?.menu.entrees.map((entree, id) => <li key={id}>{entree}</li>)}
+                        </ul>
+                    </div>
+                    <div className="menu-details border-only">
+                        <h3 className="border-only">Plat</h3>
+                        <ul>
+                            {restaurant?.menu.dishes.map((dishe, id) => <li key={id}>{dishe}</li>)}
+                        </ul>
+                    </div>
+                    <div className="menu-details border-only">
+                        <h3 className="border-only">Desert</h3>
+                        <ul>
+                            {restaurant?.menu.deserts.map((desert, id) => <li key={id}>{desert}</li>)}
+                        </ul>
+                    </div>
+                </div>
             </section>
         </section>
     )

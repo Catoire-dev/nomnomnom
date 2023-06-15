@@ -1,7 +1,5 @@
 import { ListRestaurant } from "../../shared/ListRestaurant"
 
-import "./Home.scss"
-
 import { useRestaurantContext } from "../../context/ContextRestaurant";
 
 export const Home = () => {

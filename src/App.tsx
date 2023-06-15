@@ -12,6 +12,11 @@ import { DetailsPage } from './pages/details/DetailsPage';
 import { ContextFavoriteProvider } from './context/ContextFavorite';
 
 function App() {
+  const homeRoute = "/";
+  const elementsRoute = "/details/:id";
+  const favoriteRoute = "/favorite";
+  const imgFooter = "./src/assets/img/mice.png";
+  const imgAltFooter = "A mice"
 
   return (
     <>
@@ -19,12 +24,13 @@ function App() {
       <ContextRestaurant.Provider value={{restaurantsAll: restaurants}}>
       <ContextFavoriteProvider>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/details/:id" element={<DetailsPage />} />
-          <Route path="/favorite" element={<FavoritePage />} />
+          <Route path={homeRoute} element={<Home />} />
+          <Route path={elementsRoute} element={<DetailsPage />} />
+          <Route path={favoriteRoute} element={<FavoritePage />} />
         </Routes>
       </ContextFavoriteProvider>
       </ContextRestaurant.Provider>
+      <img id="mice-footer" src={imgFooter} alt={imgAltFooter}/>
     </>
   )
 }
