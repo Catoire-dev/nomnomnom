@@ -10,13 +10,12 @@ import { Header } from './shared/Header';
 import { FavoritePage } from './pages/favorite/favoritePage';
 import { DetailsPage } from './pages/details/DetailsPage';
 import { ContextFavoriteProvider } from './context/ContextFavorite';
+import { MouseRunning } from './shared/MouseRunning';
 
 function App() {
   const homeRoute = "/";
   const elementsRoute = "/details/:id";
   const favoriteRoute = "/favorite";
-  const imgFooter = "./src/assets/img/mice.png";
-  const imgAltFooter = "A mice"
 
   return (
     <>
@@ -30,7 +29,7 @@ function App() {
         </Routes>
       </ContextFavoriteProvider>
       </ContextRestaurant.Provider>
-      <img id="mice-footer" src={imgFooter} alt={imgAltFooter}/>
+      <MouseRunning />
     </>
   )
 }

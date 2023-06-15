@@ -21,14 +21,6 @@ body {
     align-items: center;
 }
 
-#mice-footer {
-    width: 50px;
-
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
 @mixin border() {
     border: $color-border solid 2px;
     border-radius: 4px;

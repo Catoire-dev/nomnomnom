@@ -1,0 +1,18 @@
+$base-bot: 5px;
+$base-right: 5px;
+
+.mouse {
+    position: fixed;
+    bottom: $base-bot;
+    right: $base-right;
+}
+
+.running {
+    width: 95px;
+    transform: rotateY(180deg);
+    right: $base-right - 15;
+}
+
+.stop {
+    width: 50px;
+}
