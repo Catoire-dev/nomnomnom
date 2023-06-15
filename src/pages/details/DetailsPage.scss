@@ -1,6 +1,8 @@
 @import "../../shared/variable.scss";
 
 #details-section {
+    background-color: $background-color-card;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,6 +10,7 @@
 
     gap: 20px;
     
+
     #adress {
         font-size: 0.8em;
     }
@@ -18,33 +21,80 @@
 
     p {
         text-align: justify;
+        padding: 20px;
     }
+
+    hr {
+        border: 1.5px solid $color-border;
+        width: 95%;
+    }
+
 
     #menu {
         width: 100%;
         
-        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
 
         h2 {
             text-align: center;
-
         }
 
-        h3 {
-            font-size: 0.9em;
-        }
-        
-        ul {
-            padding-inline-start: 30px;
+        #menu-content {
+            display: flex;
+            flex-direction: column;
+
+
+            .menu-details {
+                background-color: $background-color-details;
+    
+                width: 95%;
+                margin-top: 20px;
+                padding: 5px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                h3 {
+                    background-color: $background-color-h3;
+
+                    min-width: 50px;
+                    padding: 5px;
+                    margin-bottom: 5px;
+
+                    font-size: 0.9em;
+                    text-align: center;
+                }
+                
+                ul {
+                    padding-inline-start: 30px;
+                    li {
+                        margin-bottom: 8px;
+                    }
+                }
+            }
         }
     }
 }
-
 
 @media screen and (min-width: $mid-screen) {
     #details-section {
         img {
             width: $mid-screen - 100px;
+        }
+
+        #menu {
+            #menu-content {
+                flex-direction: row;
+                justify-content: space-evenly;
+
+               .menu-details {
+                    width: 30%;
+
+                }
+            }
         }
     }
 }

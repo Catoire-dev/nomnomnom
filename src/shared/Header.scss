@@ -7,25 +7,30 @@
   }
 
 header {
-    background-color: #334B5B;
-    border: #1E384A solid 2px;
-    border-radius: 4px;
-
     width: 350px;
     height: 65px;
     margin: 20px 0;
-    padding: 0 10px;
+    padding: 5px 12px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    #title {
-        font-family: Soopafresh;
-        font-size: 1.5em;
-        text-align: center;
-        color: #73ABC3;
-        -webkit-text-stroke: 1px #000000;
+    #logo-section{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        #logo-1 {
+            width: 40px;
+        }
+    
+        #title {
+            font-family: Soopafresh;
+            font-size: 1.5em;
+            text-align: center;
+            color: $color-title;
+            -webkit-text-stroke: 1px #000000;
+        }
     }
 
     #favorite-section {
@@ -33,14 +38,14 @@ header {
         gap: 10px;
 
         #favorite-btn {
-            background-color: #3b576e;
+            background-color: $color-fav-btn;
             color: black;
             border: 1px outset black;
             border-radius: 2px;
             padding: 5px 10px;
         }
 
-        #logo {
+        #logo-2 {
             width: 50px;
         }
     }

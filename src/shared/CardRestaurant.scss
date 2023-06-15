@@ -1,5 +1,7 @@
+@import "./variable.scss";
+
 #restaurant-card {
-    background-color: #3b576e;
+    background-color: $background-color-card;
 
     width: 330px;
     height: 300px;

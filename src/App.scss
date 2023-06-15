@@ -11,7 +11,7 @@ a {
 }
 
 body {
-    background-color: #67749D;
+    background-color: $background-color-main;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
@@ -21,10 +21,32 @@ body {
     align-items: center;
 }
 
-.box {
-    background-color: #334B5B;
-    border: #1E384A solid 2px;
+#mice-footer {
+    width: 50px;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin border() {
+    border: $color-border solid 2px;
     border-radius: 4px;
+}
+
+.border-only {
+    @include border();
+}
+
+.border-bg {
+    background-color: $background-color-box;
+    @include border();
+
+}
+
+.box {
+    background-color: $background-color-box;
+    @include border();
 
     width: 350px;
     padding: 5px;
