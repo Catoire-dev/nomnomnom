@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Header.scss"
 
 export const Header = () => {
-    const logo1Img = "./src/assets/img/face-mouse.png";
+    const logo1Img = "/src/assets/img/face-mouse.png";
     const logo1AltText = "a cute face mouse";
     const logo2Img = "/src/assets/img/hole-mouse.png";
     const logo2AltText = "Mouse hole";

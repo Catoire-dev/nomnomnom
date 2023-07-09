@@ -3,9 +3,9 @@ import "./MouseRunning.scss";
 
 export const MouseRunning = () => {
     const [isRunning, setIsRunning] = useState(false);
-    const imgMouseRunning = "./src/assets/img/running-mouse.webp";
+    const imgMouseRunning = "/src/assets/img/running-mouse.webp";
     const imgMouseRunningAlt = "A running mouse"
-    const imgMouse = "./src/assets/img/mouse.png";
+    const imgMouse = "/src/assets/img/mouse.png";
     const imgMouseAlt = "A mouse"
 
     const ruuuuuuun = () => {

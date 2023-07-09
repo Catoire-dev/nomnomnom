@@ -20,7 +20,7 @@ export const restaurants = [
     description_short: "Cuisine de developpeur, simple et efficace",
     description_long:
       "Restaurant de developpeur a base de pastabox et sandwitch triangle sodebo. Des petit plats tels que des steak de la flemme ou des rouleau de jambon-fromage qui sauront ravire vos papilles (lol).",
-    img: "/src/assets/img/kopizio.jpeg",
+    img: "/src/assets/img/kopizio.png",
     menu: {
       entrees: ["Salade en sachet", "Taboulet en barquette", "carrote rappée en barquette"],
       dishes: ["Steak trop cuit avec ses coquilette", "Rouleau de jambon farci a l'emental rappée", "Riz cordon bleu"],
