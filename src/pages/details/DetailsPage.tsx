@@ -16,6 +16,8 @@ export const DetailsPage = () => {
 
     const restaurant = restaurantsAll.find((rest) => rest.id == restId);
 
+    // Tu pourrais aussi avoir un fallBack <p> No restaurant found </p>
+    // ou autre si le restaurant n'est pas trouvé
     const title = restaurant?.name;
     const adresse = restaurant?.address;
     const img = restaurant?.img;

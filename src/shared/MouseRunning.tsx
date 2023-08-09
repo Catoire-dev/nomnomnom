@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./MouseRunning.scss";
 
+// Excellent :)
 export const MouseRunning = () => {
     const [isRunning, setIsRunning] = useState(false);
     const imgMouseRunning = "/src/assets/img/running-mouse.webp";
